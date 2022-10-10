@@ -176,14 +176,14 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Log exception message and end process" sap:VirtualizedContainerService.HintSize="376,285" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                      <Sequence DisplayName="Log exception message and end process" sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_24">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message  (Get transaction data error)" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Fatal" Message="[Config(&quot;LogMessage_GetTransactionDataError&quot;).ToString+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                        <ui:LogMessage DisplayName="Log message  (Get transaction data error)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Fatal" Message="[Config(&quot;LogMessage_GetTransactionDataError&quot;).ToString+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
                         <Assign DisplayName="End Process (Could not get new transaction)" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_23">
                           <Assign.To>
                             <OutArgument x:TypeArguments="sd:DataRow">[TransactionItem]</OutArgument>
@@ -212,7 +212,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <State.Transitions>
-        <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="430,796" sap2010:WorkflowViewState.IdRef="Transition_6">
+        <Transition DisplayName="New Transaction" sap:VirtualizedContainerService.HintSize="450,796" sap2010:WorkflowViewState.IdRef="Transition_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:PointCollection x:Key="ConnectorLocation">349.833333333333,324.333333333333 349.833333333333,440.666666666667</av:PointCollection>
@@ -752,7 +752,7 @@
             </State>
           </Transition.To>
           <Transition.Action>
-            <ui:LogMessage DisplayName="Log message (New transaction retrieved)" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[Config(&quot;LogMessage_GetTransactionData&quot;).ToString+TransactionNumber.ToString]" />
+            <ui:LogMessage DisplayName="Log message (New transaction retrieved)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[Config(&quot;LogMessage_GetTransactionData&quot;).ToString+TransactionNumber.ToString]" />
           </Transition.Action>
           <Transition.Condition>[TransactionItem IsNot Nothing]</Transition.Condition>
         </Transition>
@@ -770,7 +770,7 @@
             <x:Reference>__ReferenceID1</x:Reference>
           </Transition.To>
           <Transition.Action>
-            <ui:LogMessage DisplayName="Log message (No more transations available)" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Process finished due to no more transaction data&quot;]" />
+            <ui:LogMessage DisplayName="Log message (No more transations available)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Process finished due to no more transaction data&quot;]" />
           </Transition.Action>
           <Transition.Condition>[TransactionItem Is Nothing]</Transition.Condition>
         </Transition>
